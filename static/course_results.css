@@ -1,0 +1,23 @@
+html, body {
+    height: 100vh;
+}
+
+#page {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#initial_text {
+    margin-top: 30px;
+    animation: fadein 3s;
+    font-size: 2em;
+}
+
+.results {
+    font-size: 1em;
+    font-style: italic;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+}
+

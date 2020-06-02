@@ -1,0 +1,36 @@
+html, body
+
+#page {
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    margin-top: 100px;
+}
+
+select {
+    text-align: center;
+    text-align-last: center;
+    height: 50px;
+    width: 150px;
+    border-radius: 5px;
+    font-family: 'Raleway', sans-serif; 
+}
+
+.group {
+    display: inline-block;
+}
+
+.search {
+    margin-top: 20px;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    border-radius: 5px;
+    box-shadow: none;
+    height: 30px;
+    width: 200px;
+    background-color: #3498db;
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/search.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="page">
+        <div id="select">
+            <h1>Select your subjects</h1>
+            {% if error != "" %}
+                <p id="error">{{ error }}</p>
+            {% endif %}
+            <form action="/search" method="POST">
+                <div class="group">
+                    <label for="subject_one">Subject One</label><br>
+                    <select name="subject_one" required>
+                        <option selected="selected" disabled></option>
+                        <option value="Art">Art</option>
+                        <option value="Biology" font-famil>Biology</option>
+                        <option value="Business Studies">Business Studies</option>
+                        <option value="Chemistry">Chemistry</option>
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="Drama">Drama</option>
+                        <option value="DT">DT</option>
+                        <option value="Economics">Economics</option>
+                        <option value="English Language">English Language</option>
+                        <option value="English Literature">English Literature</option>
+                        <option value="French">French</option>
+                        <option value="Further Maths">Further Maths</option>
+                        <option value="Geography">Geography</option>
+                        <option value="History">History</option>
+                        <option value="Mandarin">Mandarin</option>
+                        <option value="Maths">Maths</option>
+                        <option value="Media Studies">Media Studies</option>
+                        <option value="Music">Music</option>
+                        <option value="PE">PE</option>
+                        <option value="Photography">Photography</option>
+                        <option value="Physics">Physics</option>
+                        <option value="Psychology">Psychology</option>
+                        <option value="Sociology">Sociology</option>
+                        <option value="Spanish">Spanish</option>
+                    </select>
+                </div>
+                <div class="group">
+                    <label for="subject_two">Subject Two</label><br>
+                    <select name="subject_two" required>
+                        <option selected="selected" disabled></option>
+                        <option value="Art">Art</option>
+                        <option value="Biology" font-famil>Biology</option>
+                        <option value="Business Studies">Business Studies</option>
+                        <option value="Chemistry">Chemistry</option>
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="Drama">Drama</option>
+                        <option value="DT">DT</option>
+                        <option value="Economics">Economics</option>
+                        <option value="English Language">English Language</option>
+                        <option value="English Literature">English Literature</option>
+                        <option value="French">French</option>
+                        <option value="Further Maths">Further Maths</option>
+                        <option value="Geography">Geography</option>
+                        <option value="History">History</option>
+                        <option value="Mandarin">Mandarin</option>
+                        <option value="Maths">Maths</option>
+                        <option value="Media Studies">Media Studies</option>
+                        <option value="Music">Music</option>
+                        <option value="PE">PE</option>
+                        <option value="Photography">Photography</option>
+                        <option value="Physics">Physics</option>
+                        <option value="Psychology">Psychology</option>
+                        <option value="Sociology">Sociology</option>
+                        <option value="Spanish">Spanish</option>
+                    </select>
+                </div>
+                <div class="group">
+                    <label for="subject_three">Subject Three</label><br>
+                        <select name="subject_three" required>
+                            <option selected="selected" disabled></option>
+                        <option value="Art">Art</option>
+                        <option value="Biology" font-famil>Biology</option>
+                        <option value="Business Studies">Business Studies</option>
+                        <option value="Chemistry">Chemistry</option>
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="Drama">Drama</option>
+                        <option value="DT">DT</option>
+                        <option value="Economics">Economics</option>
+                        <option value="English Language">English Language</option>
+                        <option value="English Literature">English Literature</option>
+                        <option value="French">French</option>
+                        <option value="Further Maths">Further Maths</option>
+                        <option value="Geography">Geography</option>
+                        <option value="History">History</option>
+                        <option value="Mandarin">Mandarin</option>
+                        <option value="Maths">Maths</option>
+                        <option value="Media Studies">Media Studies</option>
+                        <option value="Music">Music</option>
+                        <option value="PE">PE</option>
+                        <option value="Photography">Photography</option>
+                        <option value="Physics">Physics</option>
+                        <option value="Psychology">Psychology</option>
+                        <option value="Sociology">Sociology</option>
+                        <option value="Spanish">Spanish</option>
+                        </select>
+                </div>
+                <div class="group">
+                    <label for="subject_four">Subject Four</label><br>
+                    <select name="subject_four" required>
+                        <option selected="selected" disabled></option>
+                        <option value="None">None</option>
+                        <option value="Art">Art</option>
+                        <option value="Biology" font-famil>Biology</option>
+                        <option value="Business Studies">Business Studies</option>
+                        <option value="Chemistry">Chemistry</option>
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="Drama">Drama</option>
+                        <option value="DT">DT</option>
+                        <option value="Economics">Economics</option>
+                        <option value="English Language">English Language</option>
+                        <option value="English Literature">English Literature</option>
+                        <option value="EPQ">EPQ</option>
+                        <option value="French">French</option>
+                        <option value="Further Maths">Further Maths</option>
+                        <option value="Geography">Geography</option>
+                        <option value="History">History</option>
+                        <option value="Mandarin">Mandarin</option>
+                        <option value="Maths">Maths</option>
+                        <option value="Media Studies">Media Studies</option>
+                        <option value="Music">Music</option>
+                        <option value="PE">PE</option>
+                        <option value="Photography">Photography</option>
+                        <option value="Physics">Physics</option>
+                        <option value="Psychology">Psychology</option>
+                        <option value="Sociology">Sociology</option>
+                        <option value="Spanish">Spanish</option>
+                    </select>
+                </div>
+                <br>
+                <button type="submit" class="search">Search</button>
+            </form>
+
+        </div>
+    </div>
+</body>
+</html>

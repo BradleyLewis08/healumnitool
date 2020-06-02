@@ -1,0 +1,41 @@
+#page {
+    margin-top: 30px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25em;
+}
+
+#display {
+    margin-top: 30px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+}
+
+#display h2 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25em;
+}
+
+.results {
+    display: block;
+    font-size: 1.15em;
+    font-style: bold;
+}
+
+.subjects {
+    font-style: italic;
+    font-size: 0.8em;
+}
+
+.research {
+    border: solid #74b9ff 2px;
+    border-radius: 3px;
+    display: inline;
+    background-color: #74b9ff;
+    color: white;
+    text-decoration: none;
+    font-size: 0.85em;
+}
