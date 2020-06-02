@@ -18,19 +18,19 @@
         {% elif exact_match_count != 1 and close_match_count == 1 %}
             <h1 id="initial_text">We found {{ exact_match_count }} exact match and {{ close_match_count }} close match for your subject search.<h1>
         {% endif %}
+        <a href="/" class="research" style="width: 300px;">Search again</a>
     </div>
     <div id="display">
         {% if exact_match_count > 0 %}
             <h2 class="headers">Exact matches:</h2>
             {% for match in exact_matches %}
-                <p class="results">{{ match["Course"] }} at {{ match["University"] }}  </p>
-                <a  style="margin-bottom: 10px; margin-top: 10px;" href='https://www.google.com/search?q={{match["Course"]}} at {{match["University"]}}' class="research">Research more</a>
+                <p class="results" style="margin-bottom: 10px;">{{ match["Course"] }} at {{ match["University"] }}  <a  style="margin-bottom: 10px; margin-top: 10px;" href='https://www.google.com/search?q={{match["Course"]}} at {{match["University"]}}' class="research">Research <i class="fab fa-searchengin"></i></a></p>
             {% endfor %}
         {% endif %}
         <h2 class="headers" style="margin-top: 30px;">Close matches:</h2>
         {% if close_match_count > 0 %}
             {% for close_match in close_matches %}
-                <p class="results">{{ close_match["Course"] }} at {{ close_match["University"] }} <a href='https://www.google.com/search?q={{close_match["Course"]}} at {{close_match["University"]}}' class="research">Research more</a>
+                <p class="results">{{ close_match["Course"] }} at {{ close_match["University"] }} <a href='https://www.google.com/search?q={{close_match["Course"]}} at {{close_match["University"]}}' class="research">Research <i class="fab fa-searchengin"></i></a>
                 <p class="subjects">Studied 
                     {% for i in range((close_match["Subjects"]|length) - 1) %}
                         {{close_match["Subjects"][i]}},

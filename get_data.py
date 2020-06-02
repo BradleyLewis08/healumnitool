@@ -56,11 +56,8 @@ def get_subject_matches(subjects):
         if matches == len(alumni_subjects):
             exact_matches.append({"Course":item["Course"], "University":item["Final University Destination"]})
         elif matches == len(alumni_subjects) - 1:
-            if alumni_subjects[different_index] != alumni_subjects[-1]:
-                temp1 = alumni_subjects[different_index]
-                temp2 = alumni_subjects[-1]
-                alumni_subjects[different_index] = temp1
-                alumni_subjects[-1] = temp2
+            if item['EPQ'] == "Yes":
+                alumni_subjects.append('EPQ')
             close_matches.append({"Course": item["Course"], "University": item["Final University Destination"], "Subjects": alumni_subjects, "Index": different_index})
     return exact_matches, close_matches 
 
