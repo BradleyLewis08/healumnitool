@@ -1,1 +1,1 @@
-web: gunicorn healumnitool.app
+web: gunicorn app:app
