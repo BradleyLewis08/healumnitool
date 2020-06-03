@@ -4,17 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="/assets/Logo_Alice_Smith_School.png">
     <link rel="stylesheet" href="/static/search.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>Course Search</title>
 </head>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <a href="#" class="navbar-brand">HE Alumni Search Tool</a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse"></div>
+        <div class="navbar-nav">
+            <a href="/" class="nav-item nav-link">Subject Search</a>
+            <a href="/course" class="nav-item nav-link active">Course Search</a>
+            <a href="#" class="nav-item nav-link">Alumni Contacts</a>
+        </div>
+    </div>
+</nav>
 <body>
-    <div class="select">
-        <form class="form_class" action="/course" method="POST">
+    <div id="searchpage">
+        <div id="select">
             <h1>Search for a course</h1>
-            <input type="text" name="course" class="searchText" placeholder="Enter course name"><br>
-                <button type="submit" class="search">Search Courses</button>
-        </form>
+            <form action="/course" method="POST">
+                <input id ="searchbar"type="text" name="course" class="searchText" placeholder="Enter course name"><br>
+                <button id ="searchbutton" type="submit" class="btn btn-primary">Search <i class="fas fa-search" style="margin-left: 8px;"></i></button>
+            </form>
+        </div>
     </div>
 </body>
 </html>

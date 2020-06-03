@@ -41,13 +41,13 @@ def course():
     if request.method == 'GET':
         return render_template("course.html")
     elif request.method == 'POST':
-        course_name = request.form["course"]
+        course_name = request.form["course"].lower()
         session["course_matches"] = get_data.get_course_matches(course_name)
         return redirect("/courseresults")
 
 @app.route("/courseresults", methods=['GET', 'POST'])
 def courseresults():
     if request.method == 'GET':
-        return render_template("course_results.html", matches=session["course_matches"])
+        return render_template("course_results.html", course_matches=session["course_matches"], match_count = len(session["course_matches"]))
     
 

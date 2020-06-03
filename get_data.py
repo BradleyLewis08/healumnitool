@@ -54,6 +54,7 @@ def get_subject_matches(subjects):
             different_index = 3
             alumni_subjects.append(item["Subject 4"])
         if matches == len(alumni_subjects):
+
             exact_matches.append({"Course":item["Course"], "University":item["Final University Destination"]})
         elif matches == len(alumni_subjects) - 1:
             if item['EPQ'] == "Yes":
@@ -61,17 +62,23 @@ def get_subject_matches(subjects):
             close_matches.append({"Course": item["Course"], "University": item["Final University Destination"], "Subjects": alumni_subjects, "Index": different_index})
     return exact_matches, close_matches 
 
+
+def make_subject_list(item):
+    subjects = []
+    for i in range(1,5):
+        index = "Subject" + " " + str(i)
+        if item[index] != "":
+            subjects.append(item[index])
+    return subjects
+
 def get_course_matches(course):
     data = retrieve_data()
     match_data = []
     for item in data:
-        if item["Course"].lower() == course.lower():
-            match_data.append([item["Subject 1"], item["Subject 2"], item["Subject 3"],item["Final University Destination"]])
+        if (item["Course"].lower() in course or course in item["Course"]) and item["Course"] != "":
+            subjects = make_subject_list(item)
+            match_data.append({"Subjects": subjects, "University": item["Final University Destination"], "Course": item["Course"]})
     return match_data
 
 
-exact_matches, close_matches = get_subject_matches(['geography', 'chemistry', 'maths'])
-print("Exact matches:")
-print(exact_matches)
-print("Close matches:")
-print(close_matches)
+
