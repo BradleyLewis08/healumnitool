@@ -24,8 +24,9 @@
         </div>
     </div>
 </nav>
-<body>
-    <div id="page">
+<body onload="myFunction()" style="margin:0;">
+<div id="loader"></div>
+    <div id="page" style="display: none;" class="">
         {% if exact_match_count != 1 and close_match_count != 1 %}
             <h1 id="initial_text">We found {{ exact_match_count }} exact matches and {{ close_match_count }} close matches for your subject search.</h1>
         {% elif exact_match_count == 1 and close_match_count != 1 %}
@@ -35,7 +36,7 @@
         {% endif %}
         <a href="/" class="research" style="width: 300px;">Search again</a>
     </div>
-    <div id="display">
+    <div id="display" style="display: none;">
         {% if exact_match_count > 0 %}
             <h2 class="headers">Exact matches:</h2>
             {% for match in exact_matches %}
@@ -55,6 +56,19 @@
             {% endfor %}
         {% endif %}
     </div>
+    <script>
+        var myVar;
+        
+        function myFunction() {
+          myVar = setTimeout(showPage, 3000);
+        }
+        
+        function showPage() {
+          document.getElementById("loader").style.display = "none";
+          document.getElementById("page").style.display = "block";
+          document.getElementById("display").style.display = "block";
+        }
+    </script>
 </body>
 </html>
 

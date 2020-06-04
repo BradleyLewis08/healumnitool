@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://kit.fontawesome.com/882c2058ff.js" crossorigin="anonymous"></script>
+    <title>Subject Search</title>
     <link rel="icon" href="/assets/Logo_Alice_Smith_School.png">
-    <link rel="stylesheet" href="/static/search.css">
+    <script src="https://kit.fontawesome.com/882c2058ff.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-    <title>Course Search</title>
-</head>
+    <link rel="stylesheet" href="/static/search.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway&display=swap">
+</head> 
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
     <a href="#" class="navbar-brand">HE Alumni Search Tool</a>
     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -19,20 +19,16 @@
     <div class="collapse navbar-collapse" id="navbarCollapse"></div>
         <div class="navbar-nav">
             <a href="/" class="nav-item nav-link">Subject Search</a>
-            <a href="/course" class="nav-item nav-link active">Course Search</a>
+            <a href="/course" class="nav-item nav-link">Course Search</a>
             <a href="#" class="nav-item nav-link">Alumni Contacts</a>
         </div>
     </div>
 </nav>
 <body>
     <div id="searchpage">
-        <div id="select">
-            <h1>Search for a course</h1>
-            <form action="/course" method="POST">
-                <input id ="searchbar"type="text" name="course" class="searchText" placeholder="Enter course name"><br>
-                <button id ="searchbutton" type="submit" class="btn btn-primary">Search <i class="fas fa-search" style="margin-left: 8px;"></i></button>
-            </form>
+        <div id="select" style="margin-top: 30px;">
+            <h1>Something went wrong.</h1>
+            <a href="/" class="btn btn-danger" style="margin-top: 10px;">Back to safety</a>
         </div>
     </div>
 </body>
-</html>

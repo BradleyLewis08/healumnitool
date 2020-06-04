@@ -24,22 +24,17 @@
         </div>
     </div>
 </nav>
-<body>
-    <!--
-    <ul>
-    {% for match in matches %}
-        <li>{{ match[0] }}, {{ match[1] }}, {{ match[2] }} at {{ match[3] }}</li>
-    {% endfor %}
-    </ul>
-    -->
-    <div id="page">
+<body onload="myFunction()" style="margin:0;">
+    <div id="loader"></div>
+    <div id="page" style="display: none;">
         {% if match_count != 1 %}
             <h1 id="initial_text">We found {{ match_count }} matches for your course search.</h1>
         {% else %}
             <h1 id="initial_text">We found {{ match_count }} match for your course search.</h1>
         {% endif %}
+        <a href="/course" class="research" style="width: 300px;">Search again</a>
         </div>
-    <div id="display">
+    <div id="display" style="display: none;">
         {% for match in course_matches %}
             <p class="results">Studying {{ match["Course"] }} at {{ match["University"] }}</p>
             <p class="subjects">Having studied 
@@ -50,5 +45,18 @@
             </p>
         {% endfor %}
     </div>
+    <script>
+        var myVar;
+        
+        function myFunction() {
+          myVar = setTimeout(showPage, 3000);
+        }
+        
+        function showPage() {
+          document.getElementById("loader").style.display = "none";
+          document.getElementById("page").style.display = "block";
+          document.getElementById("display").style.display = "block";
+        }
+    </script>
 </body>
 </html>

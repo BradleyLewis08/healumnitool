@@ -50,4 +50,10 @@ def courseresults():
     if request.method == 'GET':
         return render_template("course_results.html", course_matches=session["course_matches"], match_count = len(session["course_matches"]))
     
+@app.errorhandler(500)
+def handle_bad_request(e):
+    return render_template("500.html"), 500
 
+@app.errorhandler(404)
+def handle_bad_request(e):
+    return render_template("500.html"), 404
