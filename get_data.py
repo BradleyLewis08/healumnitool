@@ -75,10 +75,9 @@ def get_course_matches(course):
     data = retrieve_data()
     match_data = []
     for item in data:
-        if (item["Course"].lower() in course or course in item["Course"]) and item["Course"] != "":
+        if course.lower() in item["Course"].lower() and item["Course"] != "":
             subjects = make_subject_list(item)
             match_data.append({"Subjects": subjects, "University": item["Final University Destination"], "Course": item["Course"]})
     return match_data
 
-
-
+print(get_course_matches("History"))

@@ -17,7 +17,7 @@
     -webkit-animation-name: animatebottomtwo;
     -webkit-animation-duration: 3.0s;
     animation-name: animatebottomtwo;
-    animation-duration: 3.0s
+    animation-duration: 3.0s;
 }
 
 #display h2 {
@@ -25,6 +25,7 @@
     margin-bottom: 30px;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.25em;
+    
 }
 
 #search {

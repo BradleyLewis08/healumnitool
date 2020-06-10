@@ -43,8 +43,8 @@
                 <p class="results" style="margin-bottom: 10px;">{{ match["Course"] }} at {{ match["University"] }}  <a  style="margin-bottom: 10px; margin-top: 10px;" href='https://www.google.com/search?q={{match["Course"]}} at {{match["University"]}}' class="research">Research <i class="fab fa-searchengin"></i></a></p>
             {% endfor %}
         {% endif %}
-        <h2 class="headers" style="margin-top: 30px;">Close matches:</h2>
         {% if close_match_count > 0 %}
+        <h2 class="headers" style="margin-top: 30px;">Close matches:</h2>
             {% for close_match in close_matches %}
                 <p class="results">{{ close_match["Course"] }} at {{ close_match["University"] }} <a href='https://www.google.com/search?q={{close_match["Course"]}} at {{close_match["University"]}}' class="research">Research <i class="fab fa-searchengin"></i></a>
                 <p class="subjects">Studied 

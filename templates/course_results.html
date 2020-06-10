@@ -28,7 +28,7 @@
     <div id="loader"></div>
     <div id="page" style="display: none;">
         {% if match_count != 1 %}
-            <h1 id="initial_text">We found {{ match_count }} matches for your course search.</h1>
+            <h1 id="initial_text">We found {{ match_count }} matches for your course search of {{ course_name }}.</h1>
         {% else %}
             <h1 id="initial_text">We found {{ match_count }} match for your course search.</h1>
         {% endif %}
